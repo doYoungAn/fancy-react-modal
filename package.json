@@ -4,23 +4,29 @@
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
+    "dev": "webpack-dev-server --config ./example/webpack.config.ts",
     "build": "tsc -p tsconfig.json"
   },
   "author": "doYoungAn",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/doYoungAn/fancy-react-modal"
+    "type": "git",
+    "url": "https://github.com/doYoungAn/fancy-react-modal"
   },
   "peerDependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
+    "@types/html-webpack-plugin": "^3.2.2",
     "@types/react": "^16.9.22",
     "@types/react-dom": "^16.9.5",
+    "@types/webpack": "^4.41.6",
+    "html-webpack-plugin": "^3.2.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.6.2",
     "typescript": "^3.8.2",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
