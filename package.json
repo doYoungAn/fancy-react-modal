@@ -2,7 +2,7 @@
   "name": "fancy-react-modal",
   "version": "1.0.3",
   "description": "",
-  "main": "./lib/index.js",
+  "main": "./lib/src/index.js",
   "scripts": {
     "dev": "webpack-dev-server --config ./example/webpack.config.ts",
     "build": "tsc -p tsconfig.json"
