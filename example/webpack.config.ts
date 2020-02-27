@@ -10,6 +10,10 @@ const Config: Configuration = {
             {
                 test: /\.ts(x*)$/i,
                 loader: 'ts-loader'
+            },
+            {
+                test: /\.css$/,
+                loader: ['style-loader', 'css-loader']
             }
         ]
     },

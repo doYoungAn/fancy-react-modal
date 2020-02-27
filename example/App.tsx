@@ -6,8 +6,9 @@ const App: FC<IAppProps> = (): JSX.Element => {
 
     return (
         <>
+            <h1 className="title">fancy-react-modal</h1>
             <div>
-                Hi
+                <button className="open-btn">modal-open</button>
             </div>
         </>
     )
