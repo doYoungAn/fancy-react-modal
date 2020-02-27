@@ -1,4 +1,3 @@
 export interface IBaseModalProps<T> {
-  containerId?: string;
-  dismiss?: (result: T) => void;
+  dismiss?: (result?: T) => void;
 }

@@ -1,12 +1,15 @@
-import React, { FC, CSSProperties } from 'react';
+import React, { FC, CSSProperties, useEffect, useState } from 'react';
 
 export interface IModalWrapperProps {
-  cancel: () => void
+  cancel: () => void,
+  containerId: string
 }
 
-const ModalStyle: CSSProperties = {
+const PrefixZIndex: number = 1000;
+
+const ModalBackStyle: CSSProperties = {
   position: 'fixed',
-  zIndex: 1000,
+  zIndex: PrefixZIndex,
   top: 0,
   left: 0,
   width: '100%',
@@ -18,21 +21,30 @@ const ModalStyle: CSSProperties = {
 
 const ModalContentStyle: CSSProperties = {
   position: 'fixed',
-  zIndex: 1001,
+  zIndex: PrefixZIndex + 1,
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
   background: '#ffffff',
   padding: '20px',
-  width: '100%'
 };
 
-export const ModalWrapper: FC<IModalWrapperProps> = ({ children, cancel }): JSX.Element => {
+export const ModalWrapper: FC<IModalWrapperProps> = ({ children, cancel, containerId }): JSX.Element => {
+
+  const [modalBackStyle, setModalBackStyle] = useState<CSSProperties>(ModalBackStyle);
+  const [modalContentStyle, setModalContentStyle] = useState<CSSProperties>(ModalContentStyle);
+
+  useEffect(() => {
+    const count: number = parseInt(containerId.split('-')[2]);
+    const zIndex: number = PrefixZIndex + (count * 2);
+    setModalBackStyle({ ...modalBackStyle, zIndex });
+    setModalContentStyle({ ...modalContentStyle, zIndex: zIndex + 1 });
+  }, []);
 
   return (
     <>
-      <div className="modal" style={ModalStyle} onClick={() => {cancel()}}></div>
-      <div style={ModalContentStyle}>
+      <div style={modalBackStyle} onClick={() => {cancel()}}></div>
+      <div style={modalContentStyle}>
         {children}
       </div>
     </>
