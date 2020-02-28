@@ -1,6 +1,6 @@
 {
   "name": "fancy-react-modal",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "./lib/src/index.js",
   "scripts": {
@@ -13,6 +13,12 @@
     "type": "git",
     "url": "https://github.com/doYoungAn/fancy-react-modal"
   },
+  "keywords": [
+    "react",
+    "react-component",
+    "modal",
+    "dialog"
+  ],
   "peerDependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
