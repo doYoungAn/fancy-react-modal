@@ -2,12 +2,12 @@
 
 modal dialog for React.JS
 
+![](https://fancy-react-modal.s3.ap-northeast-2.amazonaws.com/+scenario.gif)  
+
 ## install
 
     $ npm install fancy-react-modal  
     $ yarn install fancy-react-modal
-
-![](./assets/scenario.gif)
 
 ## example
 
