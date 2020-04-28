@@ -9,6 +9,8 @@ modal dialog for React.JS
     $ npm install fancy-react-modal  
     $ yarn install fancy-react-modal
 
+## Arguments
+
 ## example
 
 ```tsx
